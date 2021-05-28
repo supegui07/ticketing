@@ -9,7 +9,7 @@ import { ExpirationCompletedListener } from "./events/listeners/expiration-compl
 import { PaymentCreatedListener } from "./events/listeners/payment-created-listener";
 
 const start = async() => {
-  console.log('orders server starting...')
+  console.log('orders server starting ...')
   if (!get('jwtConfig.secretKey')) {
     throw new InternalErrorServer('Missing the configuration for the env variable JWT_KEY')
   }
