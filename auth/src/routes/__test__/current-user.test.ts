@@ -19,6 +19,8 @@ describe('Auth API #component', () => {
       const responseCurrentUser = await request(app)
         .get('/api/users/currentuser')
         .set('Cookie', [])
+
+      console.log({responseCurrentUser})
   
       expect(responseCurrentUser.status).toBe(401)
     })
