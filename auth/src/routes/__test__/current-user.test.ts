@@ -15,14 +15,14 @@ describe('Auth API #component', () => {
       expect(responseCurrentUser.body.currentUser?.email).toBe('test@test.com')
     })
 
-    test('when a current user is requested and the account is not signed in, it should returns a 401 Unauthorized request', async () => {
+    test('when a current user is requested and the account is not signed in, it should responds with null if not authenticated', async () => {
       const responseCurrentUser = await request(app)
         .get('/api/users/currentuser')
         .set('Cookie', [])
-
-      console.log({responseCurrentUser})
   
-      expect(responseCurrentUser.status).toBe(401)
+      expect(responseCurrentUser.status).toBe(200)
+      expect(responseCurrentUser.body.currentUser).not.toBeDefined()
+
     })
   })
 })
