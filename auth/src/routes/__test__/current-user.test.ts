@@ -22,7 +22,6 @@ describe('Auth API #component', () => {
   
       expect(responseCurrentUser.status).toBe(200)
       expect(responseCurrentUser.body.currentUser).not.toBeDefined()
-
     })
   })
 })

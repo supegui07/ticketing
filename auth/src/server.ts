@@ -5,7 +5,6 @@ import { InternalErrorServer } from "@supeguitickets/common";
 import { app } from "./app";
 
 const start = async () => {
-  console.log('starting auth server....')
   if (!get('jwtConfig.secretKey')) {
     throw new InternalErrorServer('Missing the configuration for the env variable JWT_KEY')
   }
