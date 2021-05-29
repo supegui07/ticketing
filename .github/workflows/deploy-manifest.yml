@@ -1,3 +1,4 @@
+# deploy manifest
 name: deploy-manifest
 
 on:
