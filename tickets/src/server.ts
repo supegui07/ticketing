@@ -52,7 +52,6 @@ const start = async() => {
     })
     console.log('Connected to MongoDB to the tickets db')
   } catch (error) {
-    console.log('error init')
     console.error(error)
   }
 
