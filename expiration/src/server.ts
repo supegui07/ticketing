@@ -32,6 +32,7 @@ const start = async() => {
 
     new OrderCreatedListener(natsClient.client).listen()
   } catch (error) {
+    console.log('error init')
     console.error(error)
   }
 }
